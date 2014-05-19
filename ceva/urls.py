@@ -5,6 +5,7 @@ admin.autodiscover()
 
 urlpatterns = patterns('',
     url(r'^$', 'programa.views.index'),
+    url(r'^listar/$')
 
     #url(r'^admin/', include(admin.site.urls)),
 )
