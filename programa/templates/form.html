@@ -1,2 +1,8 @@
-<form action="" method="">
+
+<form action="/adicionar/" method="POST">{% csrf_token %}
+<label>Nome:</label>
+<input type="text" name="nome" value="{{cerveja.nome}}" id="nome" /><br />
+<label>Preco</label>
+<input type="text" name="preco" value="{{cerveja.preco}}" id="preco"/>
+<button type="submit">Salvar</button> 
 </form>
