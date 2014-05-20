@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Cerveja</title>
+</head>
+<body>
+		<h1>Cerveja</h1>
+		<a href="/adicionar/">Nova Cerveja</a>
+
+		{% for cerveja in cervejas %}
+			cerveja.nome - cerveja.preco <a href="deletar/{{ cerveja.pk }}">(X)</a><br/>
+		{% endfor %}
+
+</body>
+</html> 
