@@ -5,6 +5,13 @@
 </head>
 <body>
 		<h1>Cerveja</h1>
+		<div >
+			<form role="form" method="POST" action="/programa/cervejaAdicionar/"> {% csrf_token}
+				{{ form.as_p }}
+				
+			</form>	
+			}
 
+		</div>
 </body>
-</html>
+</html> 
