@@ -6,9 +6,9 @@
 <body>
 		<h1>Cerveja</h1>
 		<a href="/adicionar/">Nova Cerveja</a>
-
+		<br/>
 		{% for cerveja in cervejas %}
-			cerveja.nome - cerveja.preco <a href="deletar/{{ cerveja.pk }}">(X)</a><br/>
+			{{cerveja.nome}} - {{cerveja.preco}} <a href="deletar/{{ cerveja.pk }}">(X)</a><br/>
 		{% endfor %}
 
 </body>

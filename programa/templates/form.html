@@ -1,5 +1,6 @@
 
-<form action="/adicionar/" method="POST">{% csrf_token %}
+<form action="/salvar/" method="POST">{% csrf_token %}
+<input type="hidden" id="codigo" name="codigo" value="{{ cerveja.pk|default_if_none:'0' }}">	
 <label>Nome:</label>
 <input type="text" name="nome" value="{{cerveja.nome}}" id="nome" /><br />
 <label>Preco</label>

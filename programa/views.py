@@ -1,5 +1,6 @@
-from django.shortcuts import render
+from django.shortcuts import render, HttpResponseRedirect
 from programa.models import Cerveja
+
 
 def index(request):
     cervejas = Cerveja.objects.all()
@@ -7,3 +8,15 @@ def index(request):
 
 def cervejaAdicionar(request):
     return render(request, 'form.html')
+
+def cervejaSalvar(request):
+    if request.method == 'POST':
+        codigo = request.POST.get('codigo', '0')
+
+        cerveja = Cerveja()
+        cerveja.nome = request.POST.get('nome', '').upper()
+        cerveja.preco = request.POST.get('preco', '0.00')
+
+        cerveja.save()
+
+    return HttpResponseRedirect('/')
